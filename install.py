@@ -24,14 +24,14 @@ def install():
             live=True,
         )
         launch.run(
-            ["python", "-m", "pip", "uninstall", "-y", "nvidia-cudnn-cu11"],
+            "python -m pip uninstall -y nvidia-cudnn-cu11",
             "removing nvidia-cudnn-cu11",
         )
 
     if launch.is_installed("nvidia-cudnn-cu11"):
         if version("nvidia-cudnn-cu11") == "8.9.4.25":
             launch.run(
-                ["python", "-m", "pip", "uninstall", "-y", "nvidia-cudnn-cu11"],
+                "python -m pip uninstall -y nvidia-cudnn-cu11",
                 "removing nvidia-cudnn-cu11",
             )
 
